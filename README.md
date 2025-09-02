@@ -34,38 +34,48 @@ Twitter Lite, Pinterest.
 La arquitectura cliente-servidor es el modelo más básico de las aplicaciones web.  
 
 ###  Cliente:  ###
+
 Es quien realiza las solicitudes (por ejemplo, un navegador web o una app móvil).  
+
 ### Servidor:  ###
+
 Es quien recibe esas solicitudes, las procesa y envía una respuesta (por ejemplo, una página web, datos en formato JSON, etc.).  
 Características:  
 
 Separación de responsabilidades: el cliente se encarga de la interfaz y el servidor de la lógica y almacenamiento.
 Comunicación mediante protocolos como HTTP/HTTPS.  
+
 Ejemplo:  
+
 Un usuario accede a www.ejemplo.com desde su navegador. El navegador (cliente) solicita la página; el servidor la envía.  
 
-2. Arquitectura de tres capas  
+2. Arquitectura de tres capas
+   
 En aplicaciones web modernas, se suele usar la arquitectura de tres capas:  
 
 Capa de Presentación: Interfaz de usuario, lo que ve el usuario (HTML, CSS, JS).  
 Capa de Lógica de Negocio: Procesa reglas, operaciones y la lógica de la aplicación (por ejemplo, el backend en Node.js, Java, Python).  
 Capa de Datos: Gestiona el almacenamiento y recuperación de datos (base de datos como MySQL, MongoDB).  
+
 Ventajas:  
 
 Permite escalabilidad y mantenimiento.  
 Separación clara de responsabilidades.  
+
 Ejemplo:  
 Un usuario registra su cuenta:  
 
 Presentación: Formulario de registro (cliente).  
 Lógica: Valida datos y crea usuario (servidor).  
 Datos: Guarda usuario en la base de datos.  
+
 3. REST y API-first design  
 REST (Representational State Transfer):  
 
 Es un estilo de arquitectura para diseñar servicios web.  
 Utiliza HTTP y recursos identificados con URLs.  
 Opera con métodos estándar (GET, POST, PUT, DELETE).  
+
 Principios:  
 
 Stateless (sin estado): Cada solicitud es independiente.  
@@ -75,13 +85,16 @@ API-first design:
 Consiste en diseñar primero la API (Interfaz de Programación de Aplicaciones) antes de implementar el backend y frontend.  
 Se define cómo será la comunicación entre cliente y servidor (formatos, endpoints, etc.).  
 Facilita el trabajo paralelo de equipos y la integración con terceros.  
+
 Ejemplo:  
 Antes de crear la lógica para usuarios, se define el endpoint /api/users, qué datos acepta y devuelve, y cómo se comporta.  
+
 #  3. -Lenguajes y tecnologías fundamentales  #
 ###  HTML (HyperText Markup Language)  ###
 Es el lenguaje de marcado base para crear páginas web.  
 Define la estructura y el contenido (texto, imágenes, enlaces, formularios, etc.).  
 No es un lenguaje de programación, sino de estructuración.  
+
 Ejemplo:
 
 HTML  
@@ -98,6 +111,7 @@ HTML
 Es el lenguaje para definir la presentación y el diseño de las páginas web.  
 Permite controlar colores, fuentes, posiciones, tamaños, animaciones, etc.  
 Se puede incluir en el mismo archivo HTML o en archivos separados.  
+
 Ejemplo:  
 
 CSS  
@@ -109,30 +123,36 @@ body {
 h1 {  
   color: blue;  
 }  
+
 ### JavaScript  ###
 Es el lenguaje de programación principal para la web.  
 Permite añadir interactividad y dinamismo (validaciones, animaciones, interacción con APIs, etc.).  
 Se ejecuta en el navegador del usuario (cliente).  
+
 Ejemplo:  
 
 JavaScript  
 document.getElementById("miBoton").onclick = function() {  
   alert("¡Has hecho clic en el botón!");  
 };  
+
 ###  PHP  ###  
 Es un lenguaje de programación de propósito general, muy usado en el desarrollo web del lado del servidor (backend).  
 Permite generar contenido dinámico, manejar formularios, sesiones, interactuar con bases de datos, etc.  
 Se ejecuta en el servidor y genera HTML para el cliente.  
+
 Ejemplo:  
 
 PHP  
 <?php  
 echo "¡Hola, mundo!";  
 ?>  
+
 ###  MySQL  ##  
 Es un sistema de gestión de bases de datos relacional.  
 Permite almacenar, consultar y manipular datos de forma eficiente.  
 Se usa comúnmente junto con PHP para crear aplicaciones web dinámicas (ejemplo: blogs, tiendas online, foros).  
+
 Ejemplo de consulta SQL:  
 
 SQL  
@@ -152,20 +172,25 @@ Pull Request: Solicitud para revisar y fusionar cambios en GitHub, facilita la c
 
 Propósito de Aprendizaje 2: Desarrollar componentes y funcionalidades de una aplicación web  
 #  1.-Diseño e implementación del frontend  #
+
 Maquetación/Wireframe/Mockup  
 Herramientas y técnicas para planificar la interfaz antes de programar (Figma, Sketch, papel).  
 Maquetación: Estructura visual con HTML/CSS.  
 Wireframe: Boceto básico.  
 Mockup: Diseño visual detallado.  
 API  
+
 El frontend consume APIs para obtener y mostrar datos dinámicos.  
 
 #  2.-Diseño e implementación del backend  #
 Servidor  
+
 Software que recibe y procesa solicitudes del cliente (Node.js, PHP, Python).  
 Manejo de peticiones y respuestas HTTP: Controla cómo se reciben (request) y responden (response) las solicitudes web.  
 Conexión a bases de datos: Integración con sistemas como MySQL, PostgreSQL, MongoDB para almacenar y consultar datos.  
+
 #  3.-Bases de datos  #
+
 Modelado de datos y relaciones  
 Diseño de tablas, campos y relaciones entre entidades (ej. usuarios y posts).  
 ORM (Object Relational Mapping)  
@@ -174,6 +199,7 @@ CRUD desde el backend
 Crear, Leer, Actualizar y Eliminar datos mediante el backend y la base de datos.  
 
 #  4.-Seguridad básica en aplicaciones web  #
+
 Validación de formularios  
 Verificar datos del usuario antes de procesarlos para evitar errores y ataques.  
 Autenticación y autorización  
@@ -185,9 +211,11 @@ Autorización: Permitir o denegar acceso a recursos según el rol del usuario.
 Propósito de Aprendizaje 3: Implementar y desplegar una aplicación web funcional  
 #  1. -Integración de frontend y backend  #
 Interfaz de usuario Frontend  
+
 El frontend es la parte visual e interactiva de la aplicación (HTML, CSS, JavaScript, frameworks como React, Angular, Vue).  
 Su propósito es permitir al usuario interactuar con la aplicación, visualizar datos y enviar acciones.  
-Ejemplo: Formularios para registro/login, dashboards, listados de productos.  
+Ejemplo: Formularios para registro/login, dashboards, listados de productos. 
+
 Manejo de API  
 El frontend se comunica con el backend mediante APIs (REST, GraphQL).  
 Se usan métodos HTTP para enviar/recibir datos:  
@@ -195,38 +223,46 @@ GET para obtener datos
 POST para crear  
 PUT/PATCH para actualizar  
 DELETE para eliminar  
+
 Ejemplo:  
 JavaScript  
 fetch("https://api.misitio.com/productos")  
   .then(res => res.json())  
   .then(data => mostrarProductos(data));  
 Se recomienda validar datos antes de enviarlos y manejar errores (mensajes claros para el usuario).  
+
 Proceso de Solicitud y Respuesta de Backend  
 El backend recibe las solicitudes del frontend, procesa la lógica, accede a la base de datos y envía respuestas.  
+
 Flujo típico:  
 Usuario envía formulario desde frontend.  
 Frontend envía datos a la API.  
 Backend valida, procesa y responde (éxito o error).  
+
 Buenas prácticas:  
 Estructurar las respuestas de la API (ejemplo: {success: true, data: {...}}).  
 Manejar excepciones y enviar mensajes claros.  
 
 #  2.- Almacenamiento en Servidor
 Tipos de servidores  
+
 Servidor físico/dedicado: Hardware exclusivo, más caro pero mayor control.  
 Servidor compartido: Recursos compartidos entre varias apps, más económico pero menos flexible.  
 Servidor virtual (VPS): Simulación de servidor dedicado sobre hardware compartido, buen balance de precio y control.  
 Cloud (nube): Recursos escalables, pago por uso (AWS, Azure, Google Cloud).  
 Servicios de hosting  
 Espacio donde se publica la aplicación web.  
+
 Ejemplos populares:  
 Heroku (fácil despliegue y escalabilidad)  
 Vercel, Netlify (ideal para frontend y JAMstack)  
 DigitalOcean, AWS EC2 (más control y potencia)  
+
 Recomendaciones:  
 Analiza necesidades de tráfico, seguridad y presupuesto antes de elegir.  
 Proveedores de Servicios de Almacenamiento  
 Ofrecen almacenamiento para archivos, bases de datos, backups.  
+
 Ejemplo:  
 Amazon S3 (archivos estáticos, imágenes)  
 Firebase Storage  
@@ -234,12 +270,15 @@ Google Cloud Storage
 
 #  3.-Optimización y rendimiento  #
 Optimización de recursos  
+
 Imágenes: Comprimir y servir en formatos modernos (WebP).  
 Scripts/CSS: Minificar y combinar archivos para reducir el tamaño.  
 Carga asíncrona: Cargar recursos según se necesiten (lazy loading).  
+
 CDN: Usar redes de distribución de contenido para servir recursos de forma global y rápida.  
 Despliegue de aplicaciones web  
 Publicar la app en Internet, configurando servidores, dominios y certificados SSL.  
+
 Pasos básicos:  
 Build/compilar la app  
 Subir archivos al servidor/hosting  
@@ -248,12 +287,15 @@ Probar funcionamiento
 CI/CD básico  
 Integración Continua (CI): Automatizar pruebas y revisiones de código cada vez que se suben cambios.  
 Despliegue Continuo (CD): Automatizar el proceso de publicación de la app en servidores.  
+
 Herramientas: GitHub Actions, GitLab CI, Travis CI.  
+
 Ventajas:  
 Menos errores humanos  
 Despliegues rápidos y confiables  
 Documentación del proyecto  
 Escribir documentación clara y completa para que otros puedan instalar, usar y contribuir al proyecto.  
+
 Incluye:  
 Instrucciones de instalación y despliegue  
 Uso de la API  
