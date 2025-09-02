@@ -5,74 +5,76 @@ Propósito de Aprendizaje 1: Comprender los fundamentos del desarrollo de aplica
 ##  Tipos de aplicaciones web  ##
 ## Aplicaciones web estáticas  ##
 ### Descripción: ###
-Son páginas que muestran información fija, creada generalmente en HTML y CSS. El contenido no cambia hasta que se edita manualmente.
-Ejemplo:
-Portafolios, páginas de información básica.
+Son páginas que muestran información fija, creada generalmente en HTML y CSS. El contenido no cambia hasta que se edita manualmente.  
+Ejemplo:  
+Portafolios, páginas de información básica.  
 ## Aplicaciones web dinámicas  ##
-Descripción:
-El contenido puede cambiar en función de la interacción del usuario o la información extraída de una base de datos. Utilizan lenguajes como PHP, Python, Ruby, Node.js.
-Ejemplo:
-Blogs, tiendas en línea, sistemas de gestión de contenido (CMS).
-3. SPA (Single Page Application)
-Descripción:
-Toda la aplicación se carga en una sola página web. La navegación y las actualizaciones de contenido se realizan sin recargar la página, normalmente usando frameworks como React, Angular, o Vue.js.
-Ventajas:
-Experiencia de usuario fluida y rápida.
-Ejemplo:
-Gmail, Facebook, Twitter.
-4. PWA (Progressive Web Application)
-Descripción:
-Son aplicaciones web avanzadas que se comportan como aplicaciones nativas en dispositivos móviles. Usan tecnologías como Service Workers para funcionar offline y pueden instalarse en el dispositivo.
-Ventajas:
-Acceso offline, notificaciones push, instalación en el escritorio/móvil.
-Ejemplo:
-Twitter Lite, Pinterest.
+###  Descripción:  ###
+El contenido puede cambiar en función de la interacción del usuario o la información extraída de una base de datos. Utilizan lenguajes como PHP, Python, Ruby, Node.js.  
+Ejemplo:  
+Blogs, tiendas en línea, sistemas de gestión de contenido (CMS).  
+##  SPA (Single Page Application)  ##
+###  Descripción:  ###
+Toda la aplicación se carga en una sola página web. La navegación y las actualizaciones de contenido se realizan sin recargar la página, normalmente usando frameworks como React, Angular, o Vue.js.  
+Ventajas:  
+Experiencia de usuario fluida y rápida.  
+Ejemplo:  
+Gmail, Facebook, Twitter.  
+4. PWA (Progressive Web Application)  
+###  Descripción:  ###
+Son aplicaciones web avanzadas que se comportan como aplicaciones nativas en dispositivos móviles. Usan tecnologías como Service Workers para funcionar offline y pueden instalarse en el dispositivo.  
+Ventajas:  
+Acceso offline, notificaciones push, instalación en el escritorio/móvil.  
+Ejemplo:  
+Twitter Lite, Pinterest.  
 # 2.Arquitectura de aplicaciones web  #
-1. Cliente-Servidor
-La arquitectura cliente-servidor es el modelo más básico de las aplicaciones web.
+1. Cliente-Servidor  
+La arquitectura cliente-servidor es el modelo más básico de las aplicaciones web.  
 
-Cliente: Es quien realiza las solicitudes (por ejemplo, un navegador web o una app móvil).
-Servidor: Es quien recibe esas solicitudes, las procesa y envía una respuesta (por ejemplo, una página web, datos en formato JSON, etc.).
-Características:
+###  Cliente:  ###
+Es quien realiza las solicitudes (por ejemplo, un navegador web o una app móvil).  
+### Servidor:  ###
+Es quien recibe esas solicitudes, las procesa y envía una respuesta (por ejemplo, una página web, datos en formato JSON, etc.).  
+Características:  
 
 Separación de responsabilidades: el cliente se encarga de la interfaz y el servidor de la lógica y almacenamiento.
-Comunicación mediante protocolos como HTTP/HTTPS.
-Ejemplo:
-Un usuario accede a www.ejemplo.com desde su navegador. El navegador (cliente) solicita la página; el servidor la envía.
+Comunicación mediante protocolos como HTTP/HTTPS.  
+Ejemplo:  
+Un usuario accede a www.ejemplo.com desde su navegador. El navegador (cliente) solicita la página; el servidor la envía.  
 
-2. Arquitectura de tres capas
-En aplicaciones web modernas, se suele usar la arquitectura de tres capas:
+2. Arquitectura de tres capas  
+En aplicaciones web modernas, se suele usar la arquitectura de tres capas:  
 
-Capa de Presentación: Interfaz de usuario, lo que ve el usuario (HTML, CSS, JS).
-Capa de Lógica de Negocio: Procesa reglas, operaciones y la lógica de la aplicación (por ejemplo, el backend en Node.js, Java, Python).
-Capa de Datos: Gestiona el almacenamiento y recuperación de datos (base de datos como MySQL, MongoDB).
-Ventajas:
+Capa de Presentación: Interfaz de usuario, lo que ve el usuario (HTML, CSS, JS).  
+Capa de Lógica de Negocio: Procesa reglas, operaciones y la lógica de la aplicación (por ejemplo, el backend en Node.js, Java, Python).  
+Capa de Datos: Gestiona el almacenamiento y recuperación de datos (base de datos como MySQL, MongoDB).  
+Ventajas:  
 
-Permite escalabilidad y mantenimiento.
-Separación clara de responsabilidades.
-Ejemplo:
-Un usuario registra su cuenta:
+Permite escalabilidad y mantenimiento.  
+Separación clara de responsabilidades.  
+Ejemplo:  
+Un usuario registra su cuenta:  
 
-Presentación: Formulario de registro (cliente).
-Lógica: Valida datos y crea usuario (servidor).
-Datos: Guarda usuario en la base de datos.
-3. REST y API-first design
-REST (Representational State Transfer):
+Presentación: Formulario de registro (cliente).  
+Lógica: Valida datos y crea usuario (servidor).  
+Datos: Guarda usuario en la base de datos.  
+3. REST y API-first design  
+REST (Representational State Transfer):  
 
-Es un estilo de arquitectura para diseñar servicios web.
-Utiliza HTTP y recursos identificados con URLs.
-Opera con métodos estándar (GET, POST, PUT, DELETE).
-Principios:
+Es un estilo de arquitectura para diseñar servicios web.  
+Utiliza HTTP y recursos identificados con URLs.  
+Opera con métodos estándar (GET, POST, PUT, DELETE).  
+Principios:  
 
-Stateless (sin estado): Cada solicitud es independiente.
-Recursos: Todo se modela como recursos accesibles por URL.
-API-first design:
+Stateless (sin estado): Cada solicitud es independiente.  
+Recursos: Todo se modela como recursos accesibles por URL.  
+API-first design:  
 
-Consiste en diseñar primero la API (Interfaz de Programación de Aplicaciones) antes de implementar el backend y frontend.
-Se define cómo será la comunicación entre cliente y servidor (formatos, endpoints, etc.).
-Facilita el trabajo paralelo de equipos y la integración con terceros.
-Ejemplo:
-Antes de crear la lógica para usuarios, se define el endpoint /api/users, qué datos acepta y devuelve, y cómo se comporta.
+Consiste en diseñar primero la API (Interfaz de Programación de Aplicaciones) antes de implementar el backend y frontend.  
+Se define cómo será la comunicación entre cliente y servidor (formatos, endpoints, etc.).  
+Facilita el trabajo paralelo de equipos y la integración con terceros.  
+Ejemplo:  
+Antes de crear la lógica para usuarios, se define el endpoint /api/users, qué datos acepta y devuelve, y cómo se comporta.  
 #  3. -Lenguajes y tecnologías fundamentales  #
 HTML (HyperText Markup Language)
 Es el lenguaje de marcado base para crear páginas web.
